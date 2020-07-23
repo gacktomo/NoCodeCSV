@@ -34,7 +34,9 @@ const readdirAsync = util.promisify(fs.readdir);
   const tasks = [...pbFiles.map(file => loadCSV(file, targetColumnsPB)), ...ppFiles.map(file => loadCSV(file, targetColumnsPP))]
   const result = (await Promise.all(tasks)).flat()
 
-  const output = await util.promisify(csv.stringify)(result);
+  const csvStr = await util.promisify(csv.stringify)(result);
+  const iconv = new Iconv('utf-8', 'sjis');
+  const output = iconv.convert(csvStr);
 
   const outputPath = "result.csv"
   await util.promisify(fs.writeFile)(outputPath, output);

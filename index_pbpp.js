@@ -9,22 +9,22 @@ const readdirAsync = util.promisify(fs.readdir);
 (async () => {
   const targetColumnsPB = [
     {
-      column: "c",
+      column: "f",
       action: str => str.match(/1200\d{11}/) ? str.match(/1200\d{11}/)[0] : ""
     },
     {
-      column: "i",
-      action: () => {}
+      column: "p",
+      action: str => `PB ${str}`
     }
   ]
   const targetColumnsPP = [
     {
-      column: "c",
+      column: "f",
       action: str => str.match(/1200\d{11}/) ? str.match(/1200\d{11}/)[0] : ""
     },
     {
-      column: "i",
-      action: () => {}
+      column: "p",
+      action: str => `PP ${str}`
     }
   ]
 

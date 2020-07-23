@@ -1,13 +1,20 @@
-# NoCode CSV
-コードを書かずにCSV編集自動化したい人向けツール
+# NoCodeCSV
 
+## Build Setup
 
-## 使い方
-1. [このリンク](https://github.com/gacktomo/NoCodeCSV/archive/master.zip)からツールをダウンロードする
-2. ダウンロードしたファイルを解凍する
-3. キャンペーンの文字列に接頭辞「PB」を付けたいCSVファイルをPBフォルダにコピーする
-4. キャンペーンの文字列に接頭辞「PP」を付けたいCSVファイルをPPフォルダにコピーする
-5. `convert.bat` をダブルクリックで実行する。
-(初回実行時のみセットアップで時間がかかる。)
-6. 整形・結合済みCSVファイルが `result.csv` として保存される
-7. 月ごとに3~6を繰り返す
+```bash
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+# generate static project
+$ yarn generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
